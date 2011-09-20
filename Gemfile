@@ -1,0 +1,8 @@
+source "http://rubygems.org"
+gem "datamapper"
+gem "dm-postgres-adapter"
+gem "sinatra"
+gem "haml"
+gem "compass"
+gem "rack"
+gem "thin"
