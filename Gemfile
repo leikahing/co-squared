@@ -1,6 +1,8 @@
 source "http://rubygems.org"
+gem "bcrypt-ruby"
 gem "datamapper"
 gem "dm-postgres-adapter"
+gem "dm-sqlite-adapter"
 gem "sinatra"
 gem "haml"
 gem "compass"
