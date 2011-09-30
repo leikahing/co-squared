@@ -64,8 +64,8 @@ class Role
   has n, :users, :through => Resource
 end
 
-#DataMapper.setup(:default, 'sqlite://{Dir.pwd}/test.db')
-DataMapper.setup(:default, "sqlite::memory:")
+DataMapper.setup(:default, "sqlite://#{Dir.pwd}/test.db")
+#DataMapper.setup(:default, "sqlite::memory:")
 DataMapper.finalize
 DataMapper.auto_upgrade!
 DataMapper.auto_migrate!
