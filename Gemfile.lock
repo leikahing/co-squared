@@ -32,6 +32,9 @@ GEM
       dm-core (~> 1.2.0.rc2)
     dm-migrations (1.2.0.rc2)
       dm-core (~> 1.2.0.rc2)
+    dm-mysql-adapter (1.2.0.rc2)
+      dm-do-adapter (~> 1.2.0.rc2)
+      do_mysql (~> 0.10.6)
     dm-postgres-adapter (1.2.0.rc2)
       dm-do-adapter (~> 1.2.0.rc2)
       do_postgres (~> 0.10.6)
@@ -58,6 +61,8 @@ GEM
       uuidtools (~> 2.1.2)
     dm-validations (1.2.0.rc2)
       dm-core (~> 1.2.0.rc2)
+    do_mysql (0.10.6)
+      data_objects (= 0.10.6)
     do_postgres (0.10.6)
       data_objects (= 0.10.6)
     do_sqlite3 (0.10.6)
@@ -91,6 +96,7 @@ DEPENDENCIES
   bcrypt-ruby (>= 3.0.1)
   compass
   data_mapper (~> 1.2.0.rc2)
+  dm-mysql-adapter (~> 1.2.0.rc2)
   dm-postgres-adapter (~> 1.2.0.rc2)
   dm-sqlite-adapter (~> 1.2.0.rc2)
   haml
