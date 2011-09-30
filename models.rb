@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
-#
-require 'datamapper'
+
+require 'data_mapper'
 
 
 class Post
@@ -64,9 +64,10 @@ class Role
   has n, :users, :through => Resource
 end
 
-DataMapper.setup(:default, 'sqlite3://test.db')
+#DataMapper.setup(:default, 'sqlite://{Dir.pwd}/test.db')
+DataMapper.setup(:default, "sqlite::memory:")
 DataMapper.finalize
-#DataMapper.auto_upgrade!
-#DataMapper.auto_migrate!
-User.auto_migrate!
-Role.auto_migrate!
+DataMapper.auto_upgrade!
+DataMapper.auto_migrate!
+#User.auto_migrate!
+#Role.auto_migrate!
