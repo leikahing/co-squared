@@ -10,7 +10,7 @@ class Post
   property :title,      String, :required => true
   property :body,       Text, :required => true
   property :summary,    Text
-  property :createdAt,  EpochTime
+  property :created_at,  EpochTime
   property :guid,       UUID
 
   has n, :comments
@@ -22,11 +22,12 @@ class Comment
   include DataMapper::Resource
 
   property :id,   Serial
-  property :postAuthor, String
+  property :author, String
   property :comment, Text
   property :guid, UUID
 
   belongs_to :post
+  belongs_to :user
 end
 
 class Tag
@@ -41,12 +42,13 @@ class User
   include DataMapper::Resource
 
   property :id, Serial
-  property :userName, String, :required => true
+  property :username, String, :required => true
   property :email, String, :required => true
-  property :firstName, String
-  property :lastName, String
+  property :first_name, String
+  property :last_name, String
   property :password, BCryptHash
-  property :lastLogin, EpochTime
+  property :password_expired, Boolean
+  property :last_login, EpochTime
   property :active, Boolean, :default => true
   property :guid, UUID
 
@@ -57,7 +59,7 @@ class Role
   include DataMapper::Resource
 
   property :id, Serial
-  property :roleId, Integer, :required => true
+  property :role_id, Integer, :required => true
   property :guid, UUID
   property :name, String, :required => true
 
@@ -65,9 +67,6 @@ class Role
 end
 
 DataMapper.setup(:default, "sqlite://#{Dir.pwd}/test.db")
-#DataMapper.setup(:default, "sqlite::memory:")
 DataMapper.finalize
 DataMapper.auto_upgrade!
 DataMapper.auto_migrate!
-#User.auto_migrate!
-#Role.auto_migrate!
