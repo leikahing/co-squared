@@ -58,4 +58,12 @@ class CoSquared < Padrino::Application
   #     render 'errors/505'
   #   end
   #
+
+  get '/' do
+    "Hello"
+  end
+
+  get :about, :map => '/about' do
+    render :haml, "%p mochify is the greatest"
+  end
 end

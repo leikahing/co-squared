@@ -27,8 +27,12 @@
 #
 Padrino.configure_apps do
   # enable :sessions
-  set :session_secret, 'c5ebb2fc4187693a214a894a8aea673ed3c9f5e631ffe6eb9b7b4e72f7d4f699'
+  set :session_secret, 'c3b97572ead12bb6a7d775c8a7f21ccbc3f14cac7754cb0c75ee4fbb6179e9b4'
 end
 
 # Mounts the core application for this project
 Padrino.mount("CoSquared").to('/')
+
+Padrino.mount("Auth").to("/auth")
+
+Padrino.mount("Admin").to("/admin")

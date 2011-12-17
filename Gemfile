@@ -9,9 +9,10 @@ gem 'rake'
 gem 'sinatra-flash', :require => 'sinatra/flash'
 
 # Component requirements
+gem 'bcrypt-ruby', :require => "bcrypt"
 gem 'compass'
 gem 'haml'
-gem 'dm-sqlite-adapter'
+gem 'dm-postgres-adapter'
 gem 'dm-validations'
 gem 'dm-timestamps'
 gem 'dm-migrations'
@@ -20,7 +21,7 @@ gem 'dm-aggregates'
 gem 'dm-core'
 
 # Test requirements
-gem 'riot', :group => "test"
+gem 'rspec', :group => "test"
 gem 'rack-test', :require => "rack/test", :group => "test"
 
 # Padrino Stable Gem
