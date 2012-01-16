@@ -26,7 +26,11 @@ CoSquared.controllers :posts do
 
   get :show, :with => :id do
     @post = Post.get(params[:id])
-    render 'posts/show'
+    if @post
+      render 'posts/show'
+    else
+      render '404'
+    end
   end
 
   get :new do
