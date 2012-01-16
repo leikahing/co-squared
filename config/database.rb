@@ -11,9 +11,10 @@
 
 DataMapper.logger = logger
 DataMapper::Property::String.length(255)
+pg_user = ENV["USER"] ||= "root"
 
 case Padrino.env
-  when :development then DataMapper.setup(:default, "postgres://billylee@localhost/co_squared_development")
-  when :production  then DataMapper.setup(:default, "postgres://billylee@localhost/co_squared_production")
-  when :test        then DataMapper.setup(:default, "postgres://billylee@localhost/co_squared_test")
+  when :development then DataMapper.setup(:default, "postgres://#{pg_user}@localhost/co_squared_development")
+  when :production  then DataMapper.setup(:default, "postgres://#{pg_user}@localhost/co_squared_production")
+  when :test        then DataMapper.setup(:default, "postgres://#{pg_user}@localhost/co_squared_test")
 end

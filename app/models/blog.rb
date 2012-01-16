@@ -4,5 +4,5 @@ class Blog
   # property <name>, <type>
   property :id, Serial
   property :name, String
-  property :slug, String
+  property :slug, Slug
 end

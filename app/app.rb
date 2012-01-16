@@ -60,10 +60,10 @@ class CoSquared < Padrino::Application
   #
 
   get '/' do
-    "Hello"
+    render 'index'
   end
 
   get :about, :map => '/about' do
-    render :haml, "%p mochify is the greatest"
+    render 'about'
   end
 end

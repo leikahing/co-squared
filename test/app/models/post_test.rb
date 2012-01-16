@@ -1,9 +1,9 @@
-require File.expand_path(File.dirname(__FILE__) + '/../test_config.rb')
+require File.expand_path(File.dirname(__FILE__) + '/../../test_config.rb')
 
-context "Account Model" do
+context "Post Model" do
   context 'can be created' do
     setup do
-      Account.new
+      Post.new
     end
 
     asserts("that record is not nil") { !topic.nil? }
