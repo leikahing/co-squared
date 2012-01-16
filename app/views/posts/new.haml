@@ -2,10 +2,12 @@
 
 - form_for @post, url_for(:posts, :new), :method => 'post' do |p|
   = p.label :title, :caption => "Title"
+  %br
   = p.text_field :title
   %br
   %br
   = p.label :body, :caption => "Body"
+  %br
   = p.text_area :body, :style => "width: 400px; height: 200px;"
   %br
   %br
