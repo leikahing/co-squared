@@ -1,6 +1,6 @@
 source :rubygems
 
-# Server requirements (defaults to WEBrick)
+# Server requirements (defaults to WEBricku
 gem 'thin'
 # gem 'mongrel'
 
@@ -19,9 +19,10 @@ gem 'dm-migrations'
 gem 'dm-constraints'
 gem 'dm-aggregates'
 gem 'dm-core'
+gem 'dm-types'
 
 # Test requirements
-gem 'rspec', :group => "test"
+gem 'riot', :group => "test"
 gem 'rack-test', :require => "rack/test", :group => "test"
 
 # Padrino Stable Gem
