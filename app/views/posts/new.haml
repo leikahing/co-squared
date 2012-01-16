@@ -1,0 +1,12 @@
+- @title = "New Post"
+
+- form_for @post, url_for(:posts, :new), :method => 'post' do |p|
+  = p.label :title, :caption => "Title"
+  = p.text_field :title
+  %br
+  %br
+  = p.label :body, :caption => "Body"
+  = p.text_area :body, :style => "width: 400px; height: 200px;"
+  %br
+  %br
+  = p.submit "Create Post"

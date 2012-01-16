@@ -30,7 +30,17 @@ CoSquared.controllers :posts do
   end
 
   get :new do
+    @post = Post.new
     render 'posts/new'
+  end
+
+  post :new do
+    @post = Post.new(params[:post])
+    if @post.save
+      redirect url_for(:posts, :index)
+    else
+      render 'posts/new'
+    end
   end
 
 end
