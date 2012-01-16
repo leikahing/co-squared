@@ -25,8 +25,12 @@ CoSquared.controllers :posts do
   end
 
   get :show, :with => :id do
-    @post = Post.find_by_id(params[:id])
+    @post = Post.get(params[:id])
     render 'posts/show'
+  end
+
+  get :new do
+    render 'posts/new'
   end
 
 end
