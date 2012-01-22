@@ -32,7 +32,3 @@ end
 
 # Mounts the core application for this project
 Padrino.mount("CoSquared").to('/')
-
-Padrino.mount("Auth").to("/auth")
-
-Padrino.mount("Admin").to("/admin")

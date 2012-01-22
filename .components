@@ -1,8 +1,7 @@
 ---
 :orm: datamapper
-:test: rspec
+:test: riot
 :mock: none
 :script: jquery
 :renderer: haml
 :stylesheet: compass
-:admin_renderer: haml
