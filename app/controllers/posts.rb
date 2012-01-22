@@ -19,7 +19,6 @@ CoSquared.controllers :posts do
   # end
 
   get :index do
-    #@posts = Post.all(:order => 'created_at desc')
     @posts = Post.all(:order => [ :created_at.desc ])
     render 'posts/index'
   end
